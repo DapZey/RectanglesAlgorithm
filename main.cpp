@@ -4,7 +4,8 @@
 #include "Rectangle.h"
 #include <vector>
 int checkMostHits(std::vector<Line>& linesList, std::vector<Rectangle>& reclist){
-    Line *x;
+  Line l;
+    Line *x = l;
     for (int i = 0; i < linesList.size(); i++){
         if (linesList[i].checkHits(reclist, 0) > x->hitCount){
             x = &linesList[i];
